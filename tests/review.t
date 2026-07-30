@@ -34,9 +34,10 @@ pip-review forwards arguments it doesn't recognize to pip:
 The --only-binary value is forwarded to pip list as well as pip install:
 
   $ python - <<'PY'
-  > from pip_review.__main__ import INSTALL_ONLY, filter_forwards
-  > assert filter_forwards(['--only-binary', ':all:'], INSTALL_ONLY) == [
-  >     '--only-binary', ':all:']
+  > from pip_review.__main__ import INSTALL_ONLY, LIST_ONLY, filter_forwards
+  > args = ['--only-binary', ':all:']
+  > assert filter_forwards(args, INSTALL_ONLY) == args
+  > assert filter_forwards(args, LIST_ONLY) == args
   > PY
 
 It only fails if pip doesn't recognize it either:
