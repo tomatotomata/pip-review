@@ -64,7 +64,7 @@ INSTALL_ONLY = {
     'ignore-requires-python', 'no-build-isolation', 'use-pep517',
     'install-option', 'global-option', 'compile', 'no-compile', 
     'no-warn-script-location', 'no-warn-conflicts', 'no-binary', 
-    'only-binary', 'prefer-binary', 'no-clean', 'require-hashes',
+    'prefer-binary', 'no-clean', 'require-hashes',
     'progress-bar',
 }
 
