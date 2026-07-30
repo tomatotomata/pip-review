@@ -65,7 +65,7 @@ INSTALL_ONLY = {
     'install-option', 'global-option', 'compile', 'no-compile', 
     'no-warn-script-location', 'no-warn-conflicts', 'no-binary', 
     'only-binary', 'prefer-binary', 'no-clean', 'require-hashes',
-    'progress-bar',
+    'progress-bar', 'break-system-packages',
 }
 
 # command that sets up the pip module of the current Python interpreter
