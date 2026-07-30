@@ -53,19 +53,24 @@ Python>=3.3.
 LIST_ONLY = {
     'l', 'local', 'path', 'format', 'not-required',
     'exclude-editable', 'include-editable',
-    'exclude',
+    'exclude', 'o', 'outdated', 'u', 'uptodate',
 }
 
 # parameters that pip install supports but not pip list
 INSTALL_ONLY = {
-    'c', 'constraint', 'no-deps', 't', 'target', 'platform', 'python-version',
-    'implementation', 'abi', 'root', 'prefix', 'b', 'build', 'src', 'U',
-    'upgrade', 'upgrade-strategy', 'force-reinstall', 'I', 'ignore-installed',
-    'ignore-requires-python', 'no-build-isolation', 'use-pep517',
-    'install-option', 'global-option', 'compile', 'no-compile', 
-    'no-warn-script-location', 'no-warn-conflicts', 'no-binary', 
-    'only-binary', 'prefer-binary', 'no-clean', 'require-hashes',
-    'progress-bar', 'break-system-packages',
+    'c', 'constraint', 'C', 'build-constraint', 'no-deps', 'no-dependencies',
+    't', 'target', 'platform', 'python-version', 'implementation', 'abi',
+    'root', 'prefix', 'b', 'build', 'src', 'source', 'source-dir',
+    'source-directory', 'U', 'upgrade', 'upgrade-strategy',
+    'force-reinstall', 'I', 'ignore-installed', 'ignore-requires-python',
+    'no-build-isolation', 'check-build-dependencies', 'use-pep517',
+    'config-settings', 'install-option', 'global-option', 'compile',
+    'no-compile', 'no-warn-script-location', 'no-warn-conflicts',
+    'no-binary', 'only-binary', 'prefer-binary', 'no-clean',
+    'require-hashes', 'no-require-hashes', 'progress-bar',
+    'break-system-packages', 'dry-run', 'group', 'no-user',
+    'only-dependencies', 'only-deps', 'r', 'requirement', 'report',
+    'requirements-from-script', 'root-user-action',
 }
 
 # command that sets up the pip module of the current Python interpreter
