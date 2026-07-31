@@ -52,6 +52,17 @@ It knows which arguments not to forward to pip install:
   $ pip install python-dateutil==1.5 >/dev/null 2>&1
   $ pip-review --auto --not-required >/dev/null 2>&1
 
+It knows that --break-system-packages only applies to pip install:
+
+  $ python - <<'PY'
+  > from pip_review.__main__ import INSTALL_ONLY, LIST_ONLY, filter_forwards
+  > flag = ['--break-system-packages']
+  > assert filter_forwards(flag, INSTALL_ONLY) == []
+  > assert filter_forwards(flag, LIST_ONLY) == flag
+  > PY
+  $ pip install python-dateutil==1.5 >/dev/null 2>&1
+  $ pip-review --auto --break-system-packages >/dev/null 2>&1
+
 Next, let's test for regressions with older versions of pip:
 
   $ pip install --force-reinstall --upgrade pip\<6.0 >/dev/null 2>&1
